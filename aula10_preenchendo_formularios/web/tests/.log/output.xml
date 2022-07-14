@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20220713 22:26:22.411" rpa="false" schemaversion="3">
+<suite id="s1" name="Login Form" source="H:\Meu Drive\Profissionalização\qAcademy_atividades\QAcademy-Selenium-Com-RobotFramework\aula10_preenchendo_formularios\web\tests\login_form.robot">
+<test id="s1-t1" name="Login com sucesso" line="8">
+<kw name="Nova sessão" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220713 22:26:22.656" level="INFO">Opening browser 'chrome' to base url 'https://training-wheels-protocol.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20220713 22:26:22.656" endtime="20220713 22:26:27.149"/>
+</kw>
+<status status="PASS" starttime="20220713 22:26:22.655" endtime="20220713 22:26:27.151"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220713 22:26:27.153" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com//login'</msg>
+<status status="PASS" starttime="20220713 22:26:27.153" endtime="20220713 22:26:27.670"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=username]</arg>
+<arg>stark</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220713 22:26:27.671" level="INFO">Typing text 'stark' into text field 'css:input[name=username]'.</msg>
+<status status="PASS" starttime="20220713 22:26:27.671" endtime="20220713 22:26:27.777"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=password]</arg>
+<arg>jarvis!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220713 22:26:27.779" level="INFO">Typing text 'jarvis!' into text field 'css:input[name=password]'.</msg>
+<status status="PASS" starttime="20220713 22:26:27.778" endtime="20220713 22:26:27.866"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class:btn-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220713 22:26:27.868" level="INFO">Clicking element 'class:btn-login'.</msg>
+<status status="PASS" starttime="20220713 22:26:27.867" endtime="20220713 22:26:28.428"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Olá, Tony Stark. Você acessou a área logada!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220713 22:26:28.461" level="INFO">Current page contains text 'Olá, Tony Stark. Você acessou a área logada!'.</msg>
+<status status="PASS" starttime="20220713 22:26:28.429" endtime="20220713 22:26:28.462"/>
+</kw>
+<kw name="Encerra sessão" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220713 22:26:28.723" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220713 22:26:28.465" endtime="20220713 22:26:28.724"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220713 22:26:28.724" endtime="20220713 22:26:30.964"/>
+</kw>
+<status status="PASS" starttime="20220713 22:26:28.465" endtime="20220713 22:26:30.964"/>
+</kw>
+<status status="PASS" starttime="20220713 22:26:22.653" endtime="20220713 22:26:30.966"/>
+</test>
+<status status="PASS" starttime="20220713 22:26:22.415" endtime="20220713 22:26:30.968"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Form">Login Form</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
